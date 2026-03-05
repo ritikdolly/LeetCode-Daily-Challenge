@@ -21,6 +21,9 @@ public class MinChangesToMakeAlternatingBinaryStr {
         }
     }
     public static void main(String[] args) {
-        
+        Solution solution = new MinChangesToMakeAlternatingBinaryStr().new Solution();
+        String s = "0100";
+        int result = solution.minOperations(s);
+        System.out.println(result); // Output: 1
     }
 }
