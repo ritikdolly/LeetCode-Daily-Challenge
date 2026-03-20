@@ -32,9 +32,8 @@ I solve LeetCode daily problems to improve my **DSA skills**, **consistency**, a
 
 ```id="yo2k8x"
 📁 LeetCode-Daily
- ├── 📁 months
-    ├── 📁 february
-    ├── 📁 March
+ ├── 📁 february
+ ├── 📁 March
  └── README.md
 ```
 
