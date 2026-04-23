@@ -1,0 +1,56 @@
+// Date : 23-04-2026
+// 2615. Sum of Distances
+// https://leetcode.com/problems/sum-of-distances/?envType=daily-question&envId=2026-04-23
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class SumofDistances {
+    // Approach: Group the indices of the same numbers together and calculate the distance for each group separately.
+    class Solution {
+        public long[] distance(int[] nums) {
+            int n = nums.length;
+            long[] ans = new long[n];
+
+            Map<Integer, List<Integer>> mp = new HashMap<>();
+
+            for (int i = 0; i < n; i++) {
+                mp.computeIfAbsent(nums[i], k -> new ArrayList<>()).add(i);
+            }
+
+            for (List<Integer> pos : mp.values()) {
+
+                long sum = 0;
+                for (int x : pos)
+                    sum += x;
+
+                long leftSum = 0;
+                int m = pos.size();
+
+                for (int i = 0; i < m; i++) {
+                    long rightSum = sum - leftSum - pos.get(i);
+
+                    long left = (long) pos.get(i) * i - leftSum;
+                    long right = rightSum - (long) pos.get(i) * (m - i - 1);
+
+                    ans[pos.get(i)] = left + right;
+
+                    leftSum += pos.get(i);
+                }
+            }
+
+            return ans;
+        }
+    }
+    public static void main(String[] args) {
+        Solution sol = new SumofDistances().new Solution();
+        int[] nums = {1,3,1,1,2};
+        long[] ans = sol.distance(nums);
+        for (long x : ans) {
+            System.out.print(x + " ");
+        }
+    }
+
+}
