@@ -3,6 +3,7 @@
 // https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/?envType=daily-question&envId=2026-05-16
 
 public class FindMinimuminRotatedSortedArrayII {
+    // method 1: binary search with duplicates - O(n) in worst case
     class Solution {
         public int findMin(int[] nums) {
             int left = 0, right = nums.length - 1;
