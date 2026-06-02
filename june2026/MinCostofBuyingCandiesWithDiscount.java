@@ -5,6 +5,25 @@
 import java.util.Arrays;
 
 public class MinCostofBuyingCandiesWithDiscount {
+
+    // approach 1:
+    // class Solution {
+    //     public int minimumCost(int[] nums) {
+    //         Arrays.sort(nums);
+    //         int sum = 0;
+    //         int i = nums.length - 1;
+    //         for (int j = nums.length - 1; j >= 0; j--) {
+    //             sum = sum + nums[j];
+    //             if (i - j == 2) {
+    //                 sum = sum - nums[j];
+    //                 i = i - 3;
+    //             }
+    //         }
+    //         return sum;
+    //     }
+    // }
+
+    // App
     class Solution {
         public int minimumCost(int[] cost) {
             int n = cost.length;
@@ -23,9 +42,10 @@ public class MinCostofBuyingCandiesWithDiscount {
             return ans;
         }
     }
+
     public static void main(String[] args) {
         Solution sol = new MinCostofBuyingCandiesWithDiscount().new Solution();
-        int[] cost = {1, 2, 3};
+        int[] cost = { 1, 2, 3 };
         System.out.println(sol.minimumCost(cost)); // Output: 5
     }
 }
