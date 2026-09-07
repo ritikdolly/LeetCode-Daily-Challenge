@@ -3,6 +3,8 @@
 //problem link: https://leetcode.com/problems/distinct-subsequences/description/?envType=daily-question&envId=2026-09-06
 
 public class DistinctSubsequences {
+    
+    // Approach : Dynamic Programming
     class Solution {
         public int numDistinct(String s, String t) {
             int m = t.length();
