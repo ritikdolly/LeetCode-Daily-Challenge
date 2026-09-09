@@ -2,7 +2,7 @@
 // Problem Title: 3870. Count Commas in Range
 // Problem Link: https://leetcode.com/problems/count-commas-in-range/description/?envType=daily-question&envId=2026-09-08
 
-public class CountCommasInRange {
+public class CountCommasinRange {
 
     // Approach 1: Brute Force
     // Iterate through every number from 1 to n.
@@ -62,14 +62,14 @@ public class CountCommasInRange {
 
 
     public static void main(String[] args) {
-        idCountCommasInRange obj = new idCountCommasInRange();
-        Solution solution = obj.new Solution();
+        CountCommasinRange solution = new CountCommasinRange();
+        Solution countCommasSolution = solution.new Solution();
 
-        int n = 2500;
-
-        int result = solution.countCommas(n);
-
-        System.out.println("The number of commas is: " + result);
+        // Test cases
+        System.out.println(countCommasSolution.countCommas(999));   // Output: 0
+        System.out.println(countCommasSolution.countCommas(1000));  // Output: 1
+        System.out.println(countCommasSolution.countCommas(1500));  // Output: 501
+        System.out.println(countCommasSolution.countCommas(2000));  // Output: 1001
     }
 
 }
