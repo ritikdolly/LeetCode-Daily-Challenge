@@ -5,7 +5,8 @@
 import java.util.Stack;
 
 class ScoreofParentheses {
-
+    
+    // Approach: Using Stack
     class Solution {
         public int scoreOfParentheses(String s) {
             Stack<Integer> st = new Stack<>();
